@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+  </head>
+  <body>
+    <p>Simple Calculator</p>
+    <p>
+      <button onclick="
+        calculation += '1';
+        console.log(`Calculation: ${calculation}`);
+      ">1</button>
+
+      <button onclick="
+        calculation += '2';
+        console.log(`Calculation: ${calculation}`);
+      ">2</button>
+
+      <button onclick="
+        calculation += '3';
+        console.log(`Calculation: ${calculation}`);
+      ">3</button>
+    </p>
+
+    <p>
+      <button onclick="
+        calculation += ' + ';
+        console.log(calculation);
+      ">+</button>
+
+      <button onclick="
+        // Note: eval() takes a string and runs it as code.
+        // Avoid using eval() in real world projects since
+        // it can potentially be given harmful code to run.
+        // Only use eval() for learning purposes.
+        calculation = eval(calculation);
+        console.log(calculation);
+      ">=</button>
+
+      <button onclick="
+        calculation = '';
+        console.log('Calculator reset');
+      ">C</button>
+
+    </p>
+
+    <script>
+      let calculation = '';
+    </script>
+  </body>

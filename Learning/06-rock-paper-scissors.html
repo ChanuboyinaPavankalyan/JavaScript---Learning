@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Boolean & IF in JavaScript</title>
+    <style>
+      
+    </style>
+  </head>
+
+  <body>
+
+    <p> Rock Paper Scissors Game</p>
+    <button onclick="
+        let minCeiled = Math.ceil(1);
+        let maxFloored = Math.floor(3);
+        let computerChoice = Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled); // The maximum is inclusive and the minimum is inclusive
+        let computerMove = '';
+        if(computerChoice === 1) {
+            computerMove = 'Rock';
+        } else if(computerChoice === 2) {
+            computerMove = 'Paper';
+        } else {
+            computerMove = 'Scissors';
+        }
+
+        if(computerMove === 'Rock') {
+            alert('You choose Rock. Computer chose Rock. It is a Tie!');
+        } else if(computerMove === 'Paper') {
+            alert('You choose Rock. Computer chose Paper. You lose!');
+        } else {
+            alert('You choose Rock. Computer chose Scissors. You win!');
+        }
+
+    ">Rock</button>
+
+    <button onclick="
+        let minCeiled1 = Math.ceil(1);
+        let maxFloored1 = Math.floor(3);
+        let computerChoice1 = Math.floor(Math.random() * (maxFloored1 - minCeiled1 + 1) + minCeiled1); // The maximum is inclusive and the minimum is inclusive
+
+        let computerMove1 = '';
+        if(computerChoice1 === 1) {
+            computerMove1 = 'Rock';
+        } else if(computerChoice1 === 2) {
+            computerMove1 = 'Paper';
+        } else {
+            computerMove1 = 'Scissors';
+        }
+
+        if(computerMove1 === 'Rock') {
+            alert('You choose paper. Computer chose Rock. You Win!');
+        } else if(computerMove1 === 'Paper') {
+            alert('You choose paper. Computer chose Paper. It is a Tie!');
+        } else {
+            alert('You choose paper. Computer chose Scissors. You lose!');
+        }
+
+    ">Paper</button>
+
+    <button onclick="
+        let minCeiled2 = Math.ceil(1);
+        let maxFloored2 = Math.floor(3);
+        let computerChoice2 = Math.floor(Math.random() * (maxFloored2 - minCeiled2 + 1) + minCeiled2); // The maximum is inclusive and the minimum is inclusive
+        let computerMove2 = '';
+        if(computerChoice2 === 1) {
+            computerMove2 = 'Rock';
+        } else if(computerChoice2 === 2) {
+            computerMove2 = 'Paper';
+        } else {
+            computerMove2 = 'Scissors';
+        }
+
+        if(computerMove2 === 'Rock') {
+            alert('You choose Scissors. Computer chose Rock. You lose!');
+        } else if(computerMove2 === 'Paper') {
+            alert('You choose Scissors. Computer chose Paper. You win!');
+        } else {
+            alert('You choose Scissors. Computer chose Scissors. It is a Tie!');
+        }
+
+    ">Scissors</button>
+    
+    <script>
+
+    </script>
+
+  </body>
+</html>
+
+

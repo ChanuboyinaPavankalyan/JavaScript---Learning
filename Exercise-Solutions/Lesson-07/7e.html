@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Functons!</title>
+    <style>
+      
+    </style>
+  </head>
+
+  <body>
+    
+    <script>
+
+      function returnTemparature(temp,scale){
+        let temparature = '';
+        if (scale === "F") {
+          temparature = convertToCelsius(temp);
+          return `${temparature} °C`;
+        } else if (scale === "C") {
+          temparature = convertToFahrenheit(temp);
+          return `${temparature} °F`;
+        } else {
+          return 'Invalid Scale Provided';
+        }
+      }
+
+      function convertToFahrenheit(celsius){
+        let fahrenheit = (celsius * 9/5) + 32;
+        return fahrenheit;
+      }
+
+      function convertToCelsius(fahrenheit) {
+        let celsius = ((fahrenheit - 32) * 5/9);
+        return celsius;
+      }
+
+      console.log(convertToFahrenheit(25));
+      console.log(convertToCelsius(77));
+      console.log(returnTemparature(25,'C'));
+      console.log(returnTemparature(86,'F'));
+     </script>
+
+  </body>
+</html>

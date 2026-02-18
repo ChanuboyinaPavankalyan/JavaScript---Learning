@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> 8 Exercises </title>
+    <style>
+      
+    </style>
+  </head>
+
+  <body>
+    
+    <button onclick="
+      playGame('Heads');
+    ">Heads</button>
+    <button onclick="
+      playGame('Tails');
+    ">Tails</button>
+    <script>
+      let score = JSON.parse(localStorage.getItem('score')) || {
+        win : 0,
+        lose : 0
+      };
+
+      
+      
+
+      function computerMove() {
+        let num = Math.random();
+        //let result;
+        //let guess = 'Trails'; // You can change this to 'Tails' to test the other case
+        if(num < 0.5) {
+          return 'Heads';
+        } else {
+          return 'Tails';
+        }
+      }
+
+      function gameResult(guess,computerChoice){
+        if( guess === computerChoice ) {
+          score.win++;
+          return 'You Win!';
+        } else {
+          score.lose++; 
+          return 'You Lose!';
+        }
+      }
+
+      function playGame(guess) {
+        let computerChoice =  computerMove();
+        let result = gameResult(guess,computerChoice);
+        console.log(`Your Move: ${guess}, ComputerMove is: ${computerChoice}.${result}\nwins:${score.win} losses:${score.lose}`);
+
+        localStorage.setItem('score',JSON.stringify(score));
+      }
+
+      //guess === result ? console.log("You Win!") : console.log("You Lose!");
+ 
+      
+    </script>
+
+  </body>
+</html>
+
+

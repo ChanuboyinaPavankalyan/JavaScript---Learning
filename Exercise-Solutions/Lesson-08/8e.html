@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Lesson-08 Exercises! 
+    </title>
+  </head>
+
+  <body>
+    <script>
+      let product1 = {
+        name : "Football",
+        price : 1000
+      };
+
+      let product2 = {
+        name : 'Football',
+        price : 1000
+      };
+      
+      console.log(isSameProduct(product1,product2));
+
+
+      function isSameProduct(product1,product2){
+        if((product1.price === product2.price) && (product1.name === product2.name) ){
+          return 'Both products objects are equal!';
+        } else {
+          return 'Both products are not equal';
+        }
+      }
+     
+    </script>
+  </body>
+</html>

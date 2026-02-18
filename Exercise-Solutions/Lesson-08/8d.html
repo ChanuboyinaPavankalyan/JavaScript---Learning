@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Lesson-08 Exercises! 
+    </title>
+  </head>
+
+  <body>
+    <script>
+      let product1 = {
+        name : "BasketBall",
+        price : 10
+      };
+
+      let product2 = {
+        name : 'Football',
+        price : 1000
+      };
+      
+      console.log(compareProduct(product1,product2));
+
+
+      function compareProduct(product1,product2){
+        if(product1.price === product2.price ){
+          return 'Both products prices are equal!';
+        } else if(product1.price > product2.price) {
+          return product2.price;
+        } else {
+          return product1.price;
+        }
+      }
+     
+    </script>
+  </body>
+</html>

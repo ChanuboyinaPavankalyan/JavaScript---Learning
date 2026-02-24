@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Projects!</title>
+    <style>
+
+      body{
+        font-family: Arial;
+      }
+
+      .subscribe-button {
+        border: none;
+        background-color: black;
+        color: white;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        border-radius: 50px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-bottom: 30px;
+      }
+
+      .is-subscribed {
+        background-color: rgb(240,240,240);
+        color: black;
+      }
+
+      .cost-input {
+        font-size: 15px;
+        padding: 10px;
+      }
+
+      .calculate-button {
+        background-color: green;
+        color: white;
+        font-size: 15px;
+        padding: 12px 15px;
+        font-weight: bold;
+        margin-left: 10px;
+        border: none;
+        cursor: pointer;
+      }
+      
+
+
+    </style>
+  </head>
+
+  <body>
+    <p>YouTube Subscribe Button</p>
+    <button onclick = "
+    subscribe();
+    " class="js-subscribe-button subscribe-button">
+      Subscribe
+    </button>
+
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders under $40 = +$10 shipping.</p>
+    <p>Orders over $40 = FREE shipping.</p>
+    <input placeholder="Cost of Order" class="js-input-cost cost-input" onkeydown="
+      handleKeyDown();
+    ">
+    <button onclick="
+      showCost();
+    " class="calculate-button">Calculate</button>
+
+    <p class="js-finalcost"></p>
+
+    <br>
+
+     <p><a href="calculator.html">Link for Calculator</a></p>
+  
+
+
+    <p><a href="RPS-Game.html">Link for Rock-paper-scissors Game</a></p>
+    
+
+    <script>
+
+      function handleKeyDown() {
+        if(event.key === 'Enter') {
+          showCost();
+        }
+      }
+
+      function showCost(){
+        let inputElement = document.querySelector(".js-input-cost");
+        let cost = Number(inputElement.value); // converting a string to number!!!
+        if (cost < 40 && cost > 0) {
+          cost = cost + 10; 
+        } else if (cost < 0) {
+          document.querySelector('.js-finalcost').innerHTML = `<span style = "color: red;">Error: cost cannot be less than $0</span>`;
+        } else {
+          document.querySelector('.js-finalcost').innerHTML = `$${cost}`;
+        }
+      }
+
+
+      function subscribe() {
+        let buttonElement = document.querySelector(
+        '.js-subscribe-button');
+
+        //console.log(buttonElement);
+
+        if(buttonElement.innerText === 'Subscribe') {
+          buttonElement.innerText = 'Subscribed';
+          buttonElement.classList.add('is-subscribed');
+        } else {
+          buttonElement.innerText = 'Subscribe';
+          buttonElement.classList.remove('is-subscribed');
+        }
+      }
+
+      
+
+    </script>
+  </body>
+</html>
+
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Lesson-09 Exercises! 
+    </title>
+  </head>
+
+  <body>
+    <input placeholder="Enter Your Name..." onkeydown="
+      handleKeyDown();
+    " class="js-input">
+    <button onclick="
+      showResult();
+    ">Submit</button>
+
+    <p class="js-result"></p>
+
+    <script>
+
+      function handleKeyDown(){
+        if(event.key === 'Enter') {
+          showResult();
+        }
+      }
+
+      function showResult() {
+        let inputElementValue = document.querySelector('.js-input').value;
+        if(inputElementValue !== null){
+          document.querySelector('.js-result').innerHTML = `Your name is : ${inputElementValue}`;
+        }  
+      }
+    </script>
+  </body>
+</html>

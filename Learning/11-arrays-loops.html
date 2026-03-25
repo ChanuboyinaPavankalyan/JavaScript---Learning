@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Arrsays-Loops</title>
+  </head>
+
+  <body>
+    <script>
+      let myArray = [10,20,30];
+      console.log(myArray);
+      
+      console.log(myArray[0]);
+      myArray[0] = 99;
+      
+      console.log(myArray);
+
+      console.log(typeof[1,2]);
+      console.log(typeof myArray);
+      
+      console.log(Array.isArray([1,2]));
+      console.log(myArray.length);
+
+      myArray.push(100);
+      console.log(myArray);
+
+      myArray.splice(1,3);
+      console.log(myArray);
+
+      console.log(typeof [1,2]);
+      console.log(Array.isArray([1,232]));
+      
+
+      let complexArray = [1,2, {name: "Pavankalyan",age :22 }];
+
+      console.log(complexArray[2]);
+      console.log(complexArray[2].name);
+      console.log(complexArray[2].age);
+      
+      console.log(myArray);
+
+      let ex = [1,2,3,4,5,6];
+      console.log(ex);
+
+
+      console.log(ex.splice(2,0,'pavan','kalyan'));
+      console.log(ex);
+
+
+      // Loopsss: ------
+      // while --> Non-standard Loop
+      let i = 1;
+      while(i <= 5) {
+        console.log(i);
+        i = i + 1;
+      }
+
+      //Generate random numbers until one that atleast 0.5
+      let randomNumber = Math.random();
+      let count = 0;
+      while(randomNumber > 0.5) {
+        randomNumber = Math.random();
+        count++;
+      }
+
+
+      console.log(randomNumber);
+      console.log('The count is :' + count);
+
+      //for --> Standard Loop
+      for(let j = 6; j <= 10; j++) {
+        console.log(j);
+      }
+
+      // Accumulator Pattern
+      let nums  = [1,2,3,4,50];
+
+      let total = 0;
+      for(let i = 0; i < nums.length; i++) {
+        total = total + nums[i];
+      }
+      console.log(total);
+
+      let myArray1 = [];
+
+      for(let i = 0; i < nums.length; i++) {
+        myArray1.push(nums[i]);
+      }
+
+      console.log(myArray1);
+      
+
+
+
+
+    </script>
+
+  </body>
+</html>
